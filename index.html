@@ -10,8 +10,8 @@
     --card: #161b22;
     --text: #e6edf3;
     --text-light: #8b949e;
-    --primary: #238636;
-    --primary-dark: #1a6332;
+    --primary: #1f9e51;          /* istenen renk buraya taşındı */
+    --primary-dark: #187d40;     /* hover için koyu versiyon */
     --accent: #58a6ff;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
@@ -19,39 +19,41 @@
     background: var(--bg);
     color: var(--text);
     font-family: system-ui, -apple-system, sans-serif;
-    line-height: 1.5; /* biraz daha sıkı satır aralığı */
+    line-height: 1.5;
   }
   .hero {
     background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
-    padding: 3rem 1rem 2rem; /* üst ve alt padding azaltıldı */
+    padding: 3rem 1rem 2rem;
     text-align: center;
     border-bottom: 1px solid #30363d;
   }
   .hero img {
-    max-width: 220px; /* logo biraz küçültüldü, daha az yer kaplasın */
-    margin-bottom: 1rem; /* azaltıldı */
+    max-width: 220px;
+    margin-bottom: 1rem;
   }
   .lead {
     font-size: 1.25rem;
-    color: var(--text-light);
+    color: var(--primary);       /* lead metin artık yeşil */
     max-width: 800px;
-    margin: 0.5rem auto; /* üst boşluk azaltıldı */
+    margin: 0.5rem auto;
+    font-weight: 500;
   }
   .container {
     max-width: 600px;
-    margin: 2rem auto 0; /* üst margin azaltıldı */
+    margin: 2rem auto 0;
     padding: 0 1.5rem;
   }
   .contact {
     background: var(--card);
     border: 1px solid #30363d;
     border-radius: 12px;
-    padding: 2.5rem 1.5rem; /* dikey ve yatay padding küçültüldü */
+    padding: 2.5rem 1.5rem;
   }
   h2 {
     text-align: center;
     margin-bottom: 1.2rem;
     font-size: 1.9rem;
+    color: var(--primary);       /* başlık yeşil oldu */
   }
   p.text-center {
     text-align: center;
@@ -61,12 +63,21 @@
   form input, form textarea {
     width: 100%;
     padding: 0.9rem;
-    margin: 0.7rem 0; /* input araları sıkıştırıldı */
+    margin: 0.7rem 0;
     background: #0d1117;
     border: 1px solid #30363d;
     border-radius: 6px;
     color: var(--text);
     font-size: 1rem;
+    transition: border-color 0.2s;
+  }
+  form input:focus, form textarea:focus {
+    border-color: var(--primary);   /* focus'ta yeşil çerçeve */
+    outline: none;
+  }
+  form input::placeholder, form textarea::placeholder {
+    color: #6b8e23;                 /* placeholder hafif yeşil ton */
+    opacity: 0.7;
   }
   form button {
     background: var(--primary);
@@ -79,19 +90,25 @@
     width: 100%;
     margin-top: 0.8rem;
     font-weight: 600;
+    transition: background 0.2s;
   }
-  form button:hover { background: var(--primary-dark); }
+  form button:hover {
+    background: var(--primary-dark);
+  }
   .footer-text {
     text-align: center;
     margin-top: 1.5rem;
     color: var(--text-light);
+  }
+  .footer-text strong {
+    color: var(--primary);          /* e-posta adresi yeşil vurgulandı */
   }
   footer {
     text-align: center;
     padding: 2rem 1rem;
     color: var(--text-light);
     border-top: 1px solid #30363d;
-    margin-top: 2rem; /* footer üst boşluğu azaltıldı */
+    margin-top: 2rem;
   }
 </style>
 </head>
@@ -114,7 +131,7 @@
       <input type="text" name="name" placeholder="Adınız Soyadınız" required>
       <input type="email" name="email" placeholder="E-posta Adresiniz" required>
       <input type="tel" name="teams" placeholder="Microsoft Teams Adresiniz">
-      <textarea name="message" rows="4" placeholder="Mesajınız (isteğe bağlı)"></textarea> <!-- rows da azaltıldı -->
+      <textarea name="message" rows="4" placeholder="Mesajınız (isteğe bağlı)"></textarea>
       <input type="hidden" name="_subject" value="Yeni Teklif Talebi - Bipara Havale">
       <button type="submit">Gönder</button>
     </form>
