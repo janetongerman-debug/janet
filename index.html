@@ -19,49 +19,49 @@
     background: var(--bg);
     color: var(--text);
     font-family: system-ui, -apple-system, sans-serif;
-    line-height: 1.6;
+    line-height: 1.5; /* biraz daha sıkı satır aralığı */
   }
   .hero {
     background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
-    padding: 4rem 1rem 3rem;
+    padding: 3rem 1rem 2rem; /* üst ve alt padding azaltıldı */
     text-align: center;
     border-bottom: 1px solid #30363d;
   }
   .hero img {
-    max-width: 240px;
-    margin-bottom: 1.5rem;
+    max-width: 220px; /* logo biraz küçültüldü, daha az yer kaplasın */
+    margin-bottom: 1rem; /* azaltıldı */
   }
   .lead {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     color: var(--text-light);
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0.5rem auto; /* üst boşluk azaltıldı */
   }
-  .container { 
-    max-width: 600px; 
-    margin: 3rem auto; 
-    padding: 0 1.5rem; 
+  .container {
+    max-width: 600px;
+    margin: 2rem auto 0; /* üst margin azaltıldı */
+    padding: 0 1.5rem;
   }
   .contact {
     background: var(--card);
     border: 1px solid #30363d;
     border-radius: 12px;
-    padding: 3rem 2rem;
+    padding: 2.5rem 1.5rem; /* dikey ve yatay padding küçültüldü */
   }
-  h2 { 
-    text-align: center; 
-    margin-bottom: 1.5rem; 
-    font-size: 2rem; 
+  h2 {
+    text-align: center;
+    margin-bottom: 1.2rem;
+    font-size: 1.9rem;
   }
-  p.text-center { 
-    text-align: center; 
-    color: var(--text-light); 
-    margin-bottom: 2rem; 
+  p.text-center {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
   }
   form input, form textarea {
     width: 100%;
-    padding: 1rem;
-    margin: 0.9rem 0;
+    padding: 0.9rem;
+    margin: 0.7rem 0; /* input araları sıkıştırıldı */
     background: #0d1117;
     border: 1px solid #30363d;
     border-radius: 6px;
@@ -72,26 +72,26 @@
     background: var(--primary);
     color: white;
     border: none;
-    padding: 1.1rem 2.2rem;
+    padding: 1rem 2rem;
     border-radius: 6px;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     cursor: pointer;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 0.8rem;
     font-weight: 600;
   }
   form button:hover { background: var(--primary-dark); }
   .footer-text {
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     color: var(--text-light);
   }
   footer {
     text-align: center;
-    padding: 3rem 1rem;
+    padding: 2rem 1rem;
     color: var(--text-light);
     border-top: 1px solid #30363d;
-    margin-top: 4rem;
+    margin-top: 2rem; /* footer üst boşluğu azaltıldı */
   }
 </style>
 </head>
@@ -100,8 +100,7 @@
 <div class="hero">
   <div class="container">
     <img src="https://lh3.googleusercontent.com/d/1v63KZ4dHGZqbp1qRiv036kzLIurJD3Jo"
-         alt="Bipara Havale Logo"
-         style="max-width:240px; margin-bottom:1.5rem;">
+         alt="Bipara Havale Logo">
     <p class="lead">Bahis siteleri için profesyonel, hızlı ve güvenli ödeme altyapısı</p>
   </div>
 </div>
@@ -110,12 +109,12 @@
   <div class="contact">
     <h2>Teklif Alın</h2>
     <p class="text-center">Formu doldurun, 24 saat içinde size özel teklif gönderelim.</p>
-    
+   
     <form action="https://formspree.io/f/xreaklzd" method="POST">
       <input type="text" name="name" placeholder="Adınız Soyadınız" required>
       <input type="email" name="email" placeholder="E-posta Adresiniz" required>
       <input type="tel" name="teams" placeholder="Microsoft Teams Adresiniz">
-      <textarea name="message" rows="5" placeholder="Mesajınız (isteğe bağlı)"></textarea>
+      <textarea name="message" rows="4" placeholder="Mesajınız (isteğe bağlı)"></textarea> <!-- rows da azaltıldı -->
       <input type="hidden" name="_subject" value="Yeni Teklif Talebi - Bipara Havale">
       <button type="submit">Gönder</button>
     </form>
