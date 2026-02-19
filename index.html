@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>Bipara Havale 7/24 - Profesyonel Ödeme Sistemi</title>
+<title>Bipara Havale - Teklif Al</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root {
@@ -23,89 +23,40 @@
   }
   .hero {
     background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
-    padding: 5rem 1rem 4rem;
+    padding: 4rem 1rem 3rem;
     text-align: center;
     border-bottom: 1px solid #30363d;
   }
-  h1 { font-size: 3rem; margin: 0.5rem 0; }
-  .lead { font-size: 1.3rem; color: var(--text-light); max-width: 800px; margin: 0 auto; }
-
-  .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-
-  .stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 2rem;
-    text-align: center;
-    margin: 4rem 0;
+  .hero img {
+    max-width: 240px;
+    margin-bottom: 1.5rem;
   }
-  .stat { font-size: 2.8rem; font-weight: 700; color: var(--accent); }
-  .stat-label { color: var(--text-light); font-size: 1rem; }
-
-  .section-title { text-align: center; font-size: 2.2rem; margin: 5rem 0 3rem; }
-
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
+  .lead {
+    font-size: 1.3rem;
+    color: var(--text-light);
+    max-width: 800px;
+    margin: 0 auto;
   }
-  .card {
-    background: var(--card);
-    border: 1px solid #30363d;
-    border-radius: 12px;
-    padding: 2.2rem;
-    transition: transform 0.15s, border-color 0.15s;
+  .container { 
+    max-width: 600px; 
+    margin: 3rem auto; 
+    padding: 0 1.5rem; 
   }
-  .card:hover {
-    transform: translateY(-4px);
-    border-color: var(--primary);
-  }
-  .tag {
-    background: var(--primary);
-    color: white;
-    padding: 0.4rem 1rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    display: inline-block;
-    margin-bottom: 1.2rem;
-  }
-  .card h3 { margin: 1rem 0 1.2rem; font-size: 1.5rem; }
-  .card ul { list-style: none; margin: 1.5rem 0; }
-  .card li { margin: 0.7rem 0; color: var(--text-light); }
-  .btn {
-    background: var(--primary);
-    color: white;
-    padding: 0.9rem 1.8rem;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-block;
-    margin-top: 1.2rem;
-  }
-  .btn:hover { background: var(--primary-dark); }
-
-  .features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.8rem;
-    margin: 4rem 0 6rem;
-  }
-  .feature {
-    background: var(--card);
-    border: 1px solid #30363d;
-    border-radius: 10px;
-    padding: 1.8rem;
-  }
-  .feature strong { color: var(--accent); }
-
   .contact {
     background: var(--card);
     border: 1px solid #30363d;
     border-radius: 12px;
     padding: 3rem 2rem;
-    max-width: 600px;
-    margin: 0 auto 4rem;
+  }
+  h2 { 
+    text-align: center; 
+    margin-bottom: 1.5rem; 
+    font-size: 2rem; 
+  }
+  p.text-center { 
+    text-align: center; 
+    color: var(--text-light); 
+    margin-bottom: 2rem; 
   }
   form input, form textarea {
     width: 100%;
@@ -127,14 +78,20 @@
     cursor: pointer;
     width: 100%;
     margin-top: 1rem;
+    font-weight: 600;
   }
   form button:hover { background: var(--primary-dark); }
-
-  footer { 
-    text-align: center; 
-    padding: 3rem 1rem; 
-    color: var(--text-light); 
+  .footer-text {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--text-light);
+  }
+  footer {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--text-light);
     border-top: 1px solid #30363d;
+    margin-top: 4rem;
   }
 </style>
 </head>
@@ -142,85 +99,31 @@
 
 <div class="hero">
   <div class="container">
-    <!-- Örnek Google Drive logo linki - kendi dosyanızın ID'sini buraya koyun -->
-    <img src="https://lh3.googleusercontent.com/d/1v63KZ4dHGZqbp1qRiv036kzLIurJD3Jo" 
-         alt="Bipara Havale Logo" 
+    <img src="https://lh3.googleusercontent.com/d/1v63KZ4dHGZqbp1qRiv036kzLIurJD3Jo"
+         alt="Bipara Havale Logo"
          style="max-width:240px; margin-bottom:1.5rem;">
-    <!-- <h1>Bipara Havale 7/24</h1> -->
     <p class="lead">Bahis siteleri için profesyonel, hızlı ve güvenli ödeme altyapısı</p>
   </div>
 </div>
 
 <div class="container">
-
-  <div class="stats">
-    <div><div class="stat">24/7</div><div class="stat-label">Kesintisiz Hizmet</div></div>
-    <div><div class="stat">99.9%</div><div class="stat-label">Uptime Garantisi</div></div>
-    <div><div class="stat"><2 dk</div><div class="stat-label">Ortalama İşlem Süresi</div></div>
-    <div><div class="stat">2</div><div class="stat-label">Ödeme Yöntemi</div></div>
-  </div>
-
-  <h2 class="section-title">Ödeme Çözümlerimiz</h2>
-
-  <div class="cards">
-    <div class="card">
-      <div class="tag">Yüksek Hacim</div>
-      <h3>Banka Havalesi</h3>
-      <p>Min 1.000 ₺ — Max 1.000.000 ₺<br>İşlem süresi: 1-3 dakika</p>
-      <ul>
-        <li>Yüksek limitler</li>
-        <li>Düşük komisyon</li>
-        <li>Güvenli bankalar arası transfer</li>
-        <li>VIP özel limitler</li>
-      </ul>
-      <a href="#" class="btn">Teklif Al</a>
-    </div>
-
-    <div class="card">
-      <div class="tag">Anında</div>
-      <h3>Hızlı (Anlık) Transfer</h3>
-      <p>Min 1.000 ₺ — Max 100.000 ₺<br>İşlem süresi: Anında</p>
-      <ul>
-        <li>24/7 kesintisiz</li>
-        <li>Hafta sonu aktif</li>
-        <li>Hızlı onay</li>
-        <li>Anlık para transferi</li>
-      </ul>
-      <a href="#" class="btn">Teklif Al</a>
-    </div>
-  </div>
-
-  <h2 class="section-title">Neden Bizi Tercih Etmelisiniz?</h2>
-
-  <div class="features">
-    <div class="feature"><strong>Güvenli Altyapı</strong><br>PCI-DSS sertifikalı, uçtan uca şifreleme</div>
-    <div class="feature"><strong>7/24 Destek</strong><br>Anında çözüm, kesintisiz iletişim</div>
-    <div class="feature"><strong>En İyi Komisyon</strong><br>Sektörün en rekabetçi oranları</div>
-    <div class="feature"><strong>Kolay API</strong><br>Dakikalar içinde entegrasyon</div>
-    <div class="feature"><strong>Gerçek Zamanlı Rapor</strong><br>Tüm işlemleri anlık takip</div>
-    <div class="feature"><strong>Deneyimli Ekip</strong><br>5+ yıl bahis & fintech tecrübesi</div>
-    <div class="feature"><strong>Dolandırıcılık Koruması</strong><br>Gelişmiş makine öğrenimi algoritmaları</div>
-    <div class="feature"><strong>Çoklu Para Birimi</strong><br>TRY, USD, EUR ve daha fazlası</div>
-  </div>
-
   <div class="contact">
-    <h2 style="text-align:center; margin-bottom:1.5rem;">Teklif Alın</h2>
-    <p style="text-align:center; color:var(--text-light); margin-bottom:2rem;">Formu doldurun, 24 saat içinde size özel teklif gönderelim.</p>
-
+    <h2>Teklif Alın</h2>
+    <p class="text-center">Formu doldurun, 24 saat içinde size özel teklif gönderelim.</p>
+    
     <form action="https://formspree.io/f/xreaklzd" method="POST">
       <input type="text" name="name" placeholder="Adınız Soyadınız" required>
       <input type="email" name="email" placeholder="E-posta Adresiniz" required>
       <input type="tel" name="teams" placeholder="Microsoft Teams Adresiniz">
-      <textarea name="message" rows="5" placeholder="Mesajınız" required></textarea>
+      <textarea name="message" rows="5" placeholder="Mesajınız (isteğe bağlı)"></textarea>
       <input type="hidden" name="_subject" value="Yeni Teklif Talebi - Bipara Havale">
       <button type="submit">Gönder</button>
     </form>
 
-    <p style="text-align:center; margin-top:2rem; color:var(--text-light);">
+    <p class="footer-text">
       E-posta: <strong>info@biparahavale.com</strong>
     </p>
   </div>
-
 </div>
 
 <footer>
